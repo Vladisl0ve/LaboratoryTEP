@@ -1,4 +1,5 @@
 #include <iostream>
+#include "LaboratoryTEP.h"
 using namespace std;
 
 void v_alloc_table_add_5(int iSize)
@@ -13,13 +14,12 @@ void v_alloc_table_add_5(int iSize)
 	cout << "Table after allocation:\n";
 	for (int ii = 0; ii < iSize; ii++)
 	{
-		*(pi_table + ii) = ii + 5;
+		*(pi_table + ii) = ii + NUMBER_FIVE;
 		cout << "\t" << ii << ": " << *(pi_table + ii) << endl;
 	}
 	delete pi_table;
 	cout << "Table's memory address after deallocation: " << pi_table << "\n" << endl;
 }
-
 bool b_alloc_table_2_dim(int*** piTable, int iSizeX, int iSizeY)
 {
 	cout << "###### Exercise 2 #######" << endl;
@@ -46,15 +46,5 @@ bool b_dealloc_table_2_dim(int*** piTable, int iSizeX, int iSizeY)
 	delete (*piTable);
 	cout << "Table's memory address after deallocation: " << *piTable << endl;
 	return true; //we can avoid using of iSizeY 'cause iSizeY shows size of domestic tables
-}
-int main()
-{
-	v_alloc_table_add_5(10);
-	int** piTestTable = NULL;
-	b_alloc_table_2_dim(&piTestTable, 5, 3);
-	b_dealloc_table_2_dim(&piTestTable, 5, 3);
-
-
-	system("pause");
 }
 
