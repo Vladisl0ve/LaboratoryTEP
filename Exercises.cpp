@@ -35,7 +35,7 @@ bool alloc2(int** piTable, int iSize)
 	}
 	for (int ii = 0; ii < iSize; ii++)
 	{
-		piTable[ii] = new int(ii);
+		piTable[ii] = new int(ii * 2);
 	}
 	return true;
 }

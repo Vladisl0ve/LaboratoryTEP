@@ -13,7 +13,13 @@ int main()
 	cout << "#########" << endl;
 	show(alloc1(10), 10);
 	cout << "#########" << endl;
-
+	int** piTableTest = new int* [10];
+	alloc2(piTableTest, 10);
+	for (int ii = 0; ii < 10; ii++)
+	{
+		show(piTableTest[ii], 1);
+	}
+	dealloc(piTableTest);
 
 	system("pause");
 }
