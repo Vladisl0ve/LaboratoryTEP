@@ -44,6 +44,7 @@ bool b_dealloc_table_2_dim(int*** piTable, int iSizeX, int iSizeY)
 	for (int ii = 0; ii < iSizeX; ii++)
 		delete (*(*piTable + ii));
 	delete (*piTable);
+	*piTable = nullptr;
 	cout << "Table's memory address after deallocation: " << *piTable << endl;
 	return true; //we can avoid using of iSizeY 'cause iSizeY shows size of domestic tables
 }

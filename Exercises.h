@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 
 bool show(int* pTable, int iSize);
